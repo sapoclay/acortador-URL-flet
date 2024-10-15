@@ -1,0 +1,72 @@
+# Acortador de URL's con Flet y Python
+
+Este proyecto es una pequeña aplicación de escritorio construida con **Flet** que permite acortar URLs largas a versiones más cortas utilizando varios servicios gratuitos de acortamiento de URLs.
+
+## Características
+
+- Con esta aplicación el usuario podrá acortar URLs utilizando servicios como **TinyURL**, **clck.ru**, **is.gd** y **dagd**, entre otros. Todos estos servicios son los que aparecen incluidos en el paquete [pyshorteners](https://pyshorteners.readthedocs.io/en/latest/apis.html#da-gd) que no requieren una API Key.
+- Una vez generadas las URL acortadas, podremos opiar el enlace acortado al portapapeles con un solo clic. Además también nos permitirá abrir el enlace acortado directamente en el navegador (que no tiene mucho sentido, pero ahí está!!)
+- También podremos cambiar entre temas claro y oscuro.
+- Bandeja del sistema con icono. Actualmente este icono solo sirve para ver que la aplicación está abierta.
+- Cuenta con una ventana 'Acerca de' con una pequeña información sobre la aplicación.
+- Además, antes de cerrar la aplicación aparecerá una ventana de confirmación, ya que una vez cerrada perderemos las URL's cortas que tengamos generadas.
+
+## Servicios de acortamiento de URLs utilizados
+
+La aplicación utiliza el módulo `pyshorteners` para interactuar con varios servicios de acortamiento de URLs que por el momento no requieren API KEY:
+
+- [TinyURL](https://tinyurl.com)
+- [clck.ru](https://clck.ru)
+- [is.gd](https://is.gd)
+- [dagd](https://da.dg)
+- [osdb.link](https://osdb.link)
+
+## Capturas de pantalla
+
+### Pantalla principal
+Muestra un campo de texto donde el usuario escribiŕa la URL que se desea acortar. Tan solo hay que pulsar el botón "Acortar!" y comenzará a aparecer una lista de URLs acortadas con opciones para copiar y abrirlas. En algunas ocasiones es posible que alguno de los servicios de acortamiento no funcione por motivos ajenos a la aplicación. En este caso, debería aparecer un mensaje en la parte inferior de la aplicación.
+
+
+## Cómo ejecutar el proyecto
+
+### Requisitos previos
+
+- Python 3.10+
+- Entorno virtual configurado con las dependencias listadas en `requirements.txt`.
+- Flet instalado, junto con otras bibliotecas necesarias como `pyshorteners`, `Pillow` y `pystray`.
+
+### Instalación y ejecución
+
+1. Clona este repositorio:
+    ```bash
+    git clone https://github.com/sapoclay/acortador-URL-flet
+    cd acortador-URL-flet
+    ```
+
+2. Ejecuta el script `run_app.py`, que automáticamente verificará la existencia de un entorno virtual y las dependencias. Si no existen, las instalará antes de lanzar la aplicación.
+
+    ```bash
+    python run_app.py
+    ```
+
+#### Próximamente 
+
+- Esta aplicación me va a resultar útil para algunas cosas, por lo que más pronto que tarde estará disponible también como paquete .DEB. Y quizás como paquete .EXE. Pero esto lo haré cuando tenga tiempo.
+
+### Notas
+
+- La aplicación carga un ícono de `assets/icons/loading-animation.png` que aparece al iniciar la aplicación como una pantalla de carga.
+- El ícono de la bandeja del sistema utiliza una imagen desde el mismo directorio de `assets/icons`.
+
+### Personalización
+
+- Para cambiar el ícono de la bandeja, simplemente reemplaza `loading-animation.png` por tu propia imagen en el directorio `assets/icons/`.
+- Si deseas añadir más servicios de acortamiento de URLs, puedes modificar el archivo `main.py` y añadir más métodos de `pyshorteners` o cualquier otro servicio de tu elección.
+
+## Contribuciones
+
+¡Las contribuciones son bienvenidas! Si encuentras algún problema o tienes alguna sugerencia, no dudes en abrir un issue o enviar un pull request.
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Para más detalles, revisa el archivo [LICENSE](LICENSE).
