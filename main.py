@@ -14,7 +14,7 @@ class ShortLinkRow(ft.Row):
         self.tooltip = link_source
         self.alignment = "center"
         self.controls = [
-            ft.Text(value=shortened_link, size=16, selectable=True, italic=True),
+            ft.Text(value=shortened_link, size=18, selectable=True, italic=True),
             ft.IconButton(
                 icon=ft.icons.COPY,
                 on_click=lambda e: self.copy(shortened_link),
@@ -31,8 +31,8 @@ class ShortLinkRow(ft.Row):
     def copy(self, value):
         self.page.set_clipboard(value)
         snack_bar = ft.SnackBar(ft.Text("Link copiado al portapapeles!"), open=True)
-        self.page.overlay.append(snack_bar)  # Añadir el SnackBar a la página
-        self.page.update()  # Actualizar la página para que se muestre el SnackBar
+        self.page.overlay.append(snack_bar)  # Añadir el SnackBar 
+        self.page.update()  # Actualizar para que se muestre el SnackBar
 
 
 async def hide_splash(page, splash_image):
@@ -48,9 +48,9 @@ def create_tray_icon(page):
         icon.stop()
         on_quit(page)
 
-    image = Image.open("./assets/icons/loading-animation.png")  # Ajusta a tu icono deseado
+    image = Image.open("./assets/icons/loading-animation.png")  # Ajusta a icono 
     icon = pystray.Icon("URL Shortener", image, menu=pystray.Menu(
-        Item('Mostrar ventana', lambda: None),  # Puedes añadir más acciones aquí
+        Item('Mostrar ventana', lambda: None),  
         Item('Salir', lambda icon, item: quit_action(icon, item))
     ))
     
@@ -182,7 +182,7 @@ async def main(page: ft.Page):
     # Crear el menú
     menu = ft.PopupMenuButton(
         items=[
-            ft.PopupMenuItem(text="Acerca de", on_click=show_about_dialog),  # Opción Acerca de
+            ft.PopupMenuItem(text="Acerca de", on_click=show_about_dialog),  
             ft.PopupMenuItem(text="Ver código fuente", on_click=lambda e: page.launch_url("https://github.com/sapoclay/acortador-URL-flet")),
             ft.PopupMenuItem(text="Salir", on_click=confirm_exit),
         ]
@@ -196,7 +196,7 @@ async def main(page: ft.Page):
         actions=[theme_icon_button, menu],
     )
 
-    # Añadir el campo de texto para la URL y el texto explicativo
+    # El campo de texto para la URL y el texto explicativo
     page.add(
         text_field := ft.TextField(
             value='https://github.com/sapoclay',
