@@ -37,6 +37,9 @@ Muestra un campo de texto donde el usuario escribiŕa la URL que se desea acorta
 
 ## Cómo ejecutar el proyecto
 
+>[NOTA!]
+>Al iniciar por pimera vez la aplicación, puede tardar un poco por que la primera vez se tiene que crear el entorno virtual y se tienen que instalar las dependencias. La segunda vez el inicio ya debería ser mucho más rápido.
+
 ### Requisitos previos
 
 - Python 3.10+
@@ -73,6 +76,7 @@ sudo dpkg -i acortadorURLs.deb
 
 3. Tras la instalación ya tiene que poder ejecutar el programa buscando el lanzador en tu equipo.
 
+![acortadorURLs-icono](https://github.com/user-attachments/assets/1f314386-5e84-4ede-9f8f-888f0042c9ae)
 
 #### Próximamente 
 
