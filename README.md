@@ -1,5 +1,7 @@
 # Acortador de URL's con Flet y Python
 
+![about-acortador-urls](https://github.com/user-attachments/assets/b349ccbc-4c1d-4551-ab0c-02471ac0327b)
+
 Este proyecto es una pequeña aplicación de escritorio construida con **Flet** que permite acortar URLs largas a versiones más cortas utilizando varios servicios gratuitos de acortamiento de URLs.
 
 ## Características
@@ -22,6 +24,12 @@ La aplicación utiliza el módulo `pyshorteners` para interactuar con varios ser
 - [osdb.link](https://osdb.link)
 
 ## Capturas de pantalla
+
+![pantalla-inicio](https://github.com/user-attachments/assets/940471cd-60dc-4a43-8dbc-7c9801389a40)
+
+![mensaje-url-acortadas](https://github.com/user-attachments/assets/78aed082-5ada-44b9-9f5e-0df6ba93cb04)
+
+![urls-acortadas](https://github.com/user-attachments/assets/16bdf5b8-443d-4882-8ca0-b53712f08146)
 
 ### Pantalla principal
 Muestra un campo de texto donde el usuario escribiŕa la URL que se desea acortar. Tan solo hay que pulsar el botón "Acortar!" y comenzará a aparecer una lista de URLs acortadas con opciones para copiar y abrirlas. En algunas ocasiones es posible que alguno de los servicios de acortamiento no funcione por motivos ajenos a la aplicación. En este caso, debería aparecer un mensaje en la parte inferior de la aplicación.
