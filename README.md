@@ -57,9 +57,26 @@ Muestra un campo de texto donde el usuario escribiŕa la URL que se desea acorta
     python run_app.py
     ```
 
+----- Paquete .DEB -----
+
+1. Descarga el paquete .deb abriendo una terminal (Ctrl+Alt+T) y ejecuta:
+
+```
+wget https://github.com/sapoclay/acortador-URL-flet/releases/download/0.5/acortadorURLs.deb
+```
+
+2. El siguiente paso es proceder a la instalación del paquete descargado:
+
+```
+sudo dpkg -i acortadorURLs.deb
+```
+
+3. Tras la instalación ya tiene que poder ejecutar el programa buscando el lanzador en tu equipo.
+
+
 #### Próximamente 
 
-- Esta aplicación me va a resultar útil para algunas cosas, por lo que más pronto que tarde estará disponible también como paquete .DEB. Y quizás como paquete .EXE. Pero esto lo haré cuando tenga tiempo.
+- Esta aplicación me va a resultar útil para algunas cosas, por lo que más pronto que tarde estará disponible también como paquete .EXE. Pero esto lo haré cuando tenga tiempo.
 
 ### Notas
 

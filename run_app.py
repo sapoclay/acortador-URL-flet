@@ -2,8 +2,11 @@ import os
 import subprocess
 import sys
 
+# Obtener el directorio donde se encuentra el archivo run_app.py
+DIRECTORIO_SCRIPT = os.path.dirname(os.path.abspath(__file__))
+
 # Nombre del entorno virtual
-VENV_DIR = "venv"
+VENV_DIR = os.path.join(DIRECTORIO_SCRIPT, "venv")  # Crear la ruta completa
 
 # Determinar el ejecutable de Python dentro del entorno virtual
 def obtener_python_ejecutable():
@@ -40,8 +43,11 @@ def asegurar_pip(python_executable):
 def instalar_dependencias(python_executable):
     print("Instalando dependencias...")
     asegurar_pip(python_executable)
-    if os.path.exists("requirements.txt"):
-        subprocess.run([python_executable, "-m", "pip", "install", "-r", "requirements.txt"], check=True)
+    
+    ruta_requirements = os.path.join(DIRECTORIO_SCRIPT, "requirements.txt")
+    
+    if os.path.exists(ruta_requirements):
+        subprocess.run([python_executable, "-m", "pip", "install", "-r", ruta_requirements], check=True)
     else:
         print("No se encontró el archivo requirements.txt.")
 
@@ -78,8 +84,11 @@ def mostrar_mensaje(mensaje):
 # Ejecutar el script principal dentro del entorno virtual
 def ejecutar_app():
     python_executable = obtener_python_ejecutable()
+    
+    ruta_main = os.path.join(DIRECTORIO_SCRIPT, "main.py")
+    
     if os.path.isfile(python_executable):
-        subprocess.run([python_executable, "main.py"], check=True)
+        subprocess.run([python_executable, ruta_main], check=True)
     else:
         print(f"El ejecutable no se encuentra: {python_executable}")
 

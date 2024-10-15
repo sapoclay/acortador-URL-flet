@@ -5,8 +5,11 @@ from PIL import Image
 import asyncio
 import threading
 import pyshorteners
+import os 
 
 shortener = pyshorteners.Shortener()
+# Obtén el directorio del archivo actual
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 class ShortLinkRow(ft.Row):
     def __init__(self, shortened_link, link_source):
@@ -48,7 +51,7 @@ def create_tray_icon(page):
         icon.stop()
         on_quit(page)
 
-    image = Image.open("./assets/icons/loading-animation.png")  # Ajusta a icono 
+    image = Image.open(os.path.join(BASE_DIR, "assets/icons/loading-animation.png"))  # icono bandeja del sistema
     icon = pystray.Icon("URL Shortener", image, menu=pystray.Menu(
         Item('Mostrar ventana', lambda: None),  
         Item('Salir', lambda icon, item: quit_action(icon, item))
@@ -72,7 +75,7 @@ async def main(page: ft.Page):
 
     # Splash image (loading)
     splash_image = ft.Image(
-        src="./assets/icons/loading-animation.png",
+        src=os.path.join(BASE_DIR, "assets/icons/loading-animation.png"),  
         width=page.window.width,
         height=page.window.height,
         visible=True
@@ -135,7 +138,7 @@ async def main(page: ft.Page):
             content=ft.Container(
                 content=ft.Column(
                     [
-                        ft.Image(src="./assets/icons/logo.png", width=100, height=100),
+                        ft.Image(src=os.path.join(BASE_DIR, "assets/icons/logo.png"), width=100, height=100),
                         ft.Text(
                             "Esta es una pequeña aplicación\n que permite acortar URL's largas\n a URL's cortas utilizando\n servicios gratuitos que hay en Internet.",
                             text_align=ft.TextAlign.CENTER,
