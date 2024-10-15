@@ -37,7 +37,7 @@ Muestra un campo de texto donde el usuario escribiŕa la URL que se desea acorta
 
 ## Cómo ejecutar el proyecto
 
->[NOTA!]
+>[!NOTE]
 >Al iniciar por pimera vez la aplicación, puede tardar un poco por que la primera vez se tiene que crear el entorno virtual y se tienen que instalar las dependencias. La segunda vez el inicio ya debería ser mucho más rápido.
 
 ### Requisitos previos
