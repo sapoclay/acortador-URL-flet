@@ -6,6 +6,7 @@ Este proyecto es una pequeña aplicación de escritorio construida con **Flet** 
 
 ## Características
 
+- Esta aplicación ha sido desarollado utilizando Python3.10, pero con cualquier versión de Python3 debería poder trabajar sin problemas.
 - Con esta aplicación el usuario podrá acortar URLs utilizando servicios como **TinyURL**, **clck.ru**, **is.gd** y **dagd**, entre otros. Todos estos servicios son los que aparecen incluidos en el paquete [pyshorteners](https://pyshorteners.readthedocs.io/en/latest/apis.html#da-gd) que no requieren una API Key.
 - Una vez generadas las URL acortadas, podremos opiar el enlace acortado al portapapeles con un solo clic. Además también nos permitirá abrir el enlace acortado directamente en el navegador (que no tiene mucho sentido, pero ahí está!!)
 - También podremos cambiar entre temas claro y oscuro.
@@ -57,7 +58,7 @@ Muestra un campo de texto donde el usuario escribiŕa la URL que se desea acorta
 2. Ejecuta el script `run_app.py`, que automáticamente verificará la existencia de un entorno virtual y las dependencias. Si no existen, las instalará antes de lanzar la aplicación.
 
     ```bash
-    python run_app.py
+    python3 run_app.py
     ```
 
 ----- Paquete .DEB -----
